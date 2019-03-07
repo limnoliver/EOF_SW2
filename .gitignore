@@ -2,3 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
+
+# ignore data_cached
+data_cached/
+figures/
