@@ -1,4 +1,4 @@
-wateryear,date,activity,activity_group,current_crop,last_year_crop
+wateryear,date,activity_group,activity,current_crop,last_year_crop
 12,5/2/2012,cultivation,field cultivation with sweeps,corn silage,corn silage
 12,5/4/2012,cultivation,field cultivation with sweeps,corn silage,corn silage
 12,5/5/2012,cultivation,cultimulcher,corn silage,corn silage
