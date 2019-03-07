@@ -1,0 +1,71 @@
+wateryear,date,activity,activity_group,current_crop,last_year_crop
+12,5/2/2012,cultivation,field cultivation with sweeps,corn silage,corn silage
+12,5/4/2012,cultivation,field cultivation with sweeps,corn silage,corn silage
+12,5/5/2012,cultivation,cultimulcher,corn silage,corn silage
+12,5/6/2012,planting,planting,corn silage,corn silage
+12,5/6/2012,fertilizer application,34-0 6gal/acre starter,corn silage,corn silage
+12,6/28/2012,fertilizer application,28% 20 gal/acre,corn silage,corn silage
+13,10/8/2012,harvest,harvest,corn silage,corn silage
+13,10/25/2012,manure application,"13,000 gal/acre liquid manure",corn silage,corn silage
+13,10/25/2012,cultivation,incorporation chisel,corn silage,corn silage
+13,10/30/2012,cultivation,chisel,soybeans,corn silage
+13,5/5/2013,cultivation,2X cultivation,soybeans,corn silage
+13,6/3/2013,cultivation,cultipacker,soybeans,corn silage
+13,6/3/2013,fertilizer application,"100lbs potash (0-0-60), 5lbs sulfer",soybeans,corn silage
+13,6/5/2013,planting,soybeans,soybeans,corn silage
+13,7/25/2013,fertilizer application,0-0-30,soybeans,corn silage
+13,7/25/2013,herbicide application,"mustang max 4oz/acre, Priaxor 4 oz/acre",soybeans,corn silage
+13,9/20/2013,harvest,estimated harvest,soybeans,corn silage
+14,10/30/2013,cultivation,field chisel,corn silage,soybeans
+14,5/27/2014,cultivation,field chisel,corn silage,soybeans
+14,5/28/2014,cultivation,field chisel,corn silage,soybeans
+14,5/29/2014,cultivation,cultipacker,corn silage,soybeans
+14,5/29/2014,fertilizer application,28% 10gal,corn silage,soybeans
+14,5/29/2014,herbicide application,18oz outlook applied,corn silage,soybeans
+14,5/30/2014,planting,planting,corn silage,soybeans
+14,5/30/2014,fertilizer application,7-21-7 w/ 10oz zinc,corn silage,soybeans
+14,6/28/2014,herbicide application,5oz Status and 30oz round-up,corn silage,soybeans
+14,8/5/2014,planting,aerial application of radish 8lbs/acre,corn silage,soybeans
+15,10/15/2014,harvest,estimted corn harvest,corn silage,soybeans
+15,10/30/2014,cultivation,fall chisel,corn silage,corn silage
+15,4/25/2015,cultivation,cultivation,corn silage,corn silage
+15,4/28/2015,cultivation,cultipacker,corn silage,corn silage
+15,4/29/2015,planting,corn planted,corn silage,corn silage
+15,4/29/2015,fertilizer application,6-24-6 +252N Starter IN Row,corn silage,corn silage
+15,7/10/2015,fertilizer application, 32% 20gal,corn silage,corn silage
+16,10/10/2015,harvest,corn harvested,corn silage,corn silage
+16,10/20/2015,manure application,10000 gal/acre,corn silage,corn silage
+16,10/20/2015,cultivation,incorporation chisel,corn silage,corn silage
+16,11/5/2015,manure application,"15,000 gal/acre",corn silage,corn silage
+16,11/5/2015,cultivation,incorporation chisel,corn silage,corn silage
+16,4/15/2016,manure application,8000 gal/acre,corn silage,corn silage
+16,4/15/2016,cultivation,incorporation chisel,corn silage,corn silage
+16,5/16/2016,cultivation,cultipacker,corn silage,corn silage
+16,5/17/2016,fertilizer application,ESN 130lbs 46-0-0,corn silage,corn silage
+16,5/19/2016,planting,corn silage planted,corn silage,corn silage
+16,5/18/2016,fertilizer application,starter,corn silage,corn silage
+16,6/10/2016,herbicide application,outlook 16oz and round-up 2pts,corn silage,corn silage
+17,10/3/2016,harvest,silage harvested,corn silage,corn silage
+17,11/14/2016,cultivation,Deep tillage with subsoiler (10-12 inches),corn silage,corn silage
+17,5/14/2017,cultivation,Field cultivation,corn silage,corn silage
+17,5/17/2017,cultivation,Field cultivation,corn silage,corn silage
+17,5/17/2017,planting,"Corn Planted, ESN 150 lbs applied, Starter applied also (See C-CBT Boost sheet for formulation)",corn silage,corn silage
+17,9/16/2017,harvest,Corn Harvested,corn silage,corn silage
+17,10/8/2017,intervention,waterway installation began,corn silage,corn silage
+18,10/30/2017,manure application,"Liquid dairy manure applied 5,000 gal/acre",corn silage,corn silage
+18,11/10/2017,manure application,"15,000 gal/acre",corn silage,corn silage
+18,11/10/2017,cultivation,incorporation chisel,corn silage,corn silage
+18,11/10/2017,planting,west field cover crop install,corn silage,corn silage
+18,5/19/2018,cultivation,waterway repair,corn silage,corn silage
+18,5/20/2018,cultivation,waterway repair,corn silage,corn silage
+18,5/21/2018,cultivation,waterway repair,corn silage,corn silage
+18,5/26/2018,cultivation,cultivation,corn silage,corn silage
+18,5/27/2018,cultivation,cultivation,corn silage,corn silage
+18,5/28/2018,planting,planting corn silage,corn silage,corn silage
+18,5/28/2017,fertilizer application,5-20-17 starger and 100#ESN,corn silage,corn silage
+18,5/30/2018,manure application,SE1/4 field 3000gal/acre (~7-8acres),corn silage,corn silage
+18,6/9/2018,fertilizer application,10gal/acre 28% N,corn silage,corn silage
+18,6/23/2018,planting,interseeded 5#clover and 3# annyal ryegrass - failed,corn silage,corn silage
+18,9/24/2018,harvest,harvest corn silage 21T/acre,corn silage,corn silage
+18,9/28/2018,planting,"no till 3# clover, 5# annual rye, 2# wheat, 5# oats, 1/4# radish",corn silage,corn silage
+19,11/8/2018,manure application,3000gal/acre surface applied,corn silage,corn silage
