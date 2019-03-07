@@ -23,6 +23,9 @@ predictors.keep <- c(names.cor[-drop.predictors], 'frozen')
 # log transform response vars
 dat.mod[,responses] <- log10(dat.mod[,responses])
 sums <- colSums(dat.mod[,responses])
-if(any(is.infinite(sums))) {
-  stop('Zeros in the response variables caused values to be infinite when log transformed. Please see code in scripts/data_analysis/1_mdc_before_after.R to debug.', call. = F)
-}
+#if(any(is.infinite(sums))) {
+#  stop('Zeros in the response variables caused values to be infinite when log transformed. Please see code in scripts/data_analysis/1_mdc_before_after.R to debug.', call. = F)
+#}
+
+# for now, drop Inf values created by logging
+dat.mod <- dat.mod[!is.infinite(rowSums(dat.mod[,responses])),]
