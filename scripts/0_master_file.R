@@ -33,7 +33,7 @@ test_site <- 'trt' # If a paired study design, the abbreviation of the test, or 
 site_tz <- "America/Chicago" # all data should be converted (or called into R) to the same time zone. 
               # Indicate here which timezone that is - e.g. central "America/Chicago" or central without DST "Etc/GMT+6"
 
-datetime_format <- "%m/%d/%y %H:%M" # format of all your datetime columns. For example, if your datetimes are formatted with
+datetime_format <- "%Y-%m-%d %H:%M:%S" # format of all your datetime columns. For example, if your datetimes are formatted with
                                        # "mm/dd/yyyy HH:MM:SS" the coded format of the date in R is "%m/%d/%Y %H:%M:%S"
 
 date_format <- "%m/%d/%Y" # format of date variables in provided data files. For example, the default in Excel is
@@ -52,7 +52,7 @@ end_date <- as.POSIXct('2018-09-30 00:00:01') # YYYY-MM-DD HH:MM:SS date/time of
 
 ######## storm event data #############
 ## set wq data parameters
-wq_file <- 'ESW2 storm event data.csv' # file name (with .csv extention) where event-level water quality data are stored
+wq_file <- 'wq_dates_fixed.csv' # file name (with .csv extention) where event-level water quality data are stored
 
 # for setting conentrations and loads, only include the variables you want to 
 # include in the analysis. E.g., if you only want to evaluate loads (not concentrations), 
@@ -123,10 +123,12 @@ nut_additions_keywords <- c('manure', 'fertilizer') # words used to describe any
 cultivation_keywords <- c('cultivation') # words to describe tillage and other field cultivation activities
                                          # this word will be found in the "activity_group"
 planting_keywords <- c('planting') # words to describing planting activities, found in "activity_group" column
-harvest_keywords <- c('cutting', 'harvest') # words describing cutting/harvest activities, found in "activity_group" column.
+harvest_keywords <- 'harvest' # words describing cutting/harvest activities, found in "activity_group" column.
+cutting_keywords <- 'cutting' # harvest should describe taking of non-perennial crops. Cutting should describe taking of cover crops
+                              # that will regrow without replanting (e.g., alfalfa). Use NA if no cuttings took place on field.
 
 # discharge data
-discharge_file <- '' # filename of discharge data of a nearby stream gage to calculate antecedent discharge, NA if pulling from NWIS using site_no
+discharge_file <- NA # filename of discharge data of a nearby stream gage to calculate antecedent discharge, NA if pulling from NWIS using site_no
 discharge_site_no <- '04085108' # if not providing a discharge file, the USGS stream gage site to pull discharge data from
 antecedent_days <- c(1,2,3,7,14) # the days over which to calculate antecedent discharge. These are the values used for the WI sites.
 
@@ -142,6 +144,8 @@ weather_file <- NA # filename (ending in .csv) of daily weather data from a near
 noaa_site <- 'USW00014898' # nearest NOAA met station site number. Can use both weather_file and noaa_site if 
                 # weather_file does not contain snow depth. 
 
+noaakey <- 'wWTQWiZfdnBPNMwEYtBOiAKwibWEwGPL'
+
 other_weather_vars <- NA # if you have other daily weather/site characteristic data in your file (e.g., soil temp) and want to 
                          # include them as predictors in the model, include the names of the column here in quotes (e.g. "soil_temp"). 
                          # If you have multiple variables, create a vector of column names (e.g., c("soil_temp", "soil_moisture"))
@@ -151,7 +155,8 @@ other_weather_vars <- NA # if you have other daily weather/site characteristic d
                          # the file scripts/data_processing/2_calc_weather_variables
 
 ######## other ##############
-predictors_drop <- '' # one or more predictor variables that should be dropped from the analysis based
+predictors_drop <- c('days_since_fertilizer', 'days_since_cultivation')
+                      # one or more predictor variables that should be dropped from the analysis based
                       # on site-specific analysis goals. For example, if you expect that the implemented
                       # BMP will affect field activity (e.g., if the farmer moves to no-till, 'days_since_cultivation'
                       # will be different before vs after) it should not be included in the residual model.
