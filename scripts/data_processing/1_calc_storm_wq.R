@@ -109,8 +109,8 @@ concbystorm <- concbystorm %>%
 stormdesc <- storms %>%
   group_by(unique_storm_number) %>%
   summarise(
-    sample_start = min(sample_start),
-    sample_end = max(sample_end),
+    sample_start = min(sample_start, na.rm = TRUE),
+    sample_end = max(sample_end, na.rm = TRUE),
     storm_start = min(storm_start),
     storm_end = max(storm_end),
     peak_discharge = max(peak_discharge), 
@@ -135,7 +135,7 @@ wq.bystorm <- merge(wq.bystorm, stormdesc)
     group_by(unique_storm_number) %>%
     summarise(
       sample_start = min(sample_start, na.rm = TRUE),
-      sample_end = max(sample_end),
+      sample_end = max(sample_end, na.rm = TRUE),
       storm_start = min(storm_start),
       storm_end = max(storm_end),
       peak_discharge = max(peak_discharge), 
