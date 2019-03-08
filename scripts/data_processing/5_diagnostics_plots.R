@@ -6,32 +6,17 @@ wq <- read.csv(tempfile, stringsAsFactors = F)
 
 # for each constituent, plot time vs conc or load, size of dot = discharge
 # get load and conc vars
-if (length(loads) == 1 & !is.na(loads)){
-  
-  loadvars <- grep(loads, names(wq), ignore.case = TRUE, value = TRUE)
 
-} else if (is.na(loads)) {
-  loadvars <- NA
-} else {
-  loadvars <- loads
-}
+loadvars <- wq_env$loadvars
+concvars <- wq_env$concvars
 
-if (length(concentrations) == 1 & !is.na(concentrations)){
-  
-  concvars <- grep(concentrations, names(wq), ignore.case = TRUE, value = TRUE)
-  
-} else if (is.na(concentrations)) {
-  concvars <- NA
-} else {
-  concvars <- concentrations
-}
 
 wq[,'storm_start'] <- as.POSIXct(wq[,'storm_start'])
 wq$Date <- wq[,'storm_start']
 wq <- dataRetrieval::addWaterYear(wq)
 
-plot_all_vars <- c(concvars, loadvars)
-plot_all_vars <- plot_all_vars[!is.na(plot_all_vars)]
+load('data_cached/modvars.Rdata')
+plot_all_vars <- responses
 
 
 
@@ -119,7 +104,8 @@ prop <- wq.temp %>%
   summarise_at(vars(loadvars), sum)
 
 # change names to be shortened/clean versions
-names(prop)[2:ncol(prop)] <- clean_names[(length(concvars) + 1):(length(clean_names))]
+
+names(prop)[2:ncol(prop)] <- clean_names[ifelse(is.na(concvars), 1, length(concvars) + 1):((ifelse(is.na(concvars), 1, length(concvars) + 1) + (length(loadvars)))-1)]
 prop.long <- prop %>%
   gather(variable, value, -frozen)
 
