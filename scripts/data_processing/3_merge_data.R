@@ -2,7 +2,7 @@
 temp_file <- paste0('data_cached/', site)
 
 wq <- read.csv(paste0(temp_file, '_prepped_WQbystorm.csv'))
-rain <- read.csv(paste0(temp_file, '_rain_variables.csv'))
+rain <- read.csv(paste0(temp_file, '_rain_variables_fixed.csv'))
 discharge <- read.csv(paste0(temp_file, '_discharge_variables.csv'))
 weather <- read.csv(paste0(temp_file, '_weather_by_storm.csv'))
 field <- read.csv(paste0(temp_file, '_field_predictors.csv'))
