@@ -16,7 +16,7 @@ predictors <- names(select(eof, rain:ARFdays14, sin_sdate:snwd_diff, days_since_
                            ant_dis_1day_max:ant_dis_14day_max, frozen))
 
 # drop site-specific predictors that shouldn't be in mod
-if (!is.na(predictors_drop)) {
+if (!any(is.na(predictors_drop))) {
   predictors <- predictors[-which(predictors %in% predictors_drop)]
 }
 
